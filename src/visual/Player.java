@@ -6,15 +6,17 @@ import java.awt.event.KeyEvent;
 
 public class Player {
 
-    Image img = new ImageIcon("src/res/hero.png").getImage().getScaledInstance(200, 200, 0);
+    Image img = new ImageIcon("src/res/hero.png").getImage().getScaledInstance(250, 123, 0);
 
     double v = 10.0;
     double s = 0.0;
     double layer1 = 0.0;
     double layer2 = 800.0;
 
-    double x = 300;
-    double y = 30;
+    int points = 0;
+
+    int x = 200;
+    int y = 30;
 
     public void move() {
         s += v;
@@ -37,5 +39,9 @@ public class Player {
     }
 
     public void keyReleased(KeyEvent e) {
+    }
+
+    public Rectangle getRectangle() {
+        return new Rectangle(x, y, 200, 123);
     }
 }

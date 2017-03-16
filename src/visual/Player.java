@@ -12,6 +12,8 @@ public class Player {
     double s = 0.0;
     double layer1 = 0.0;
     double layer2 = 800.0;
+    String ss;
+    String ss2;
     String tt;
 
     int points = 0;

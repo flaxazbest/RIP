@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Player {
+class Player {
 
     Image img = new ImageIcon("src/res/hero.png").getImage().getScaledInstance(250, 123, 0);
 
@@ -12,6 +12,7 @@ public class Player {
     double s = 0.0;
     double layer1 = 0.0;
     double layer2 = 800.0;
+    String ss;
 
     int points = 0;
 
@@ -36,9 +37,6 @@ public class Player {
             y-=5;
         if (key == KeyEvent.VK_DOWN)
             y+=5;
-    }
-
-    public void keyReleased(KeyEvent e) {
     }
 
     public Rectangle getRectangle() {

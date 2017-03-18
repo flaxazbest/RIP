@@ -35,7 +35,13 @@ public class Field extends JPanel implements ActionListener, Runnable {
         while(true) {
             try {
                 Thread.sleep(2000);
-                fruits.add(new Fruit(900, rand.nextInt(600), rand.nextInt(5), rand.nextInt(20), this));
+                int n = rand.nextInt(50);
+                if (n < 30)
+                    fruits.add(new Strawberry(900, rand.nextInt(600), rand.nextInt(5),  this));
+                else if (n < 45)
+                    fruits.add(new Apple(900, rand.nextInt(600), rand.nextInt(5),  this));
+                else
+                    fruits.add(new Banana(900, rand.nextInt(600), rand.nextInt(5),  this));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

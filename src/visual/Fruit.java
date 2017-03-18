@@ -3,20 +3,19 @@ package visual;
 import javax.swing.*;
 import java.awt.*;
 
-class Fruit {
+abstract class Fruit {
 
     int x;
     int y;
     private int v;
-    private int points;
-    Image img = new ImageIcon("src/res/fruit.png").getImage();
+    protected int points;
+    Image img;// = new ImageIcon("src/res/fruit.png").getImage();
     private Field field;
 
-    Fruit(int x, int y, int v, int points, Field field) {
+    Fruit(int x, int y, int v, Field field) {
         this.x = x;
         this.y = y;
         this.v = v;
-        this.points = points;
         this.field = field;
     }
 

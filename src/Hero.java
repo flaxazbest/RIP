@@ -119,3 +119,4 @@ public void setScore(long score) {
         System.out.println("Hero move");
     }
 }
+// new branch
